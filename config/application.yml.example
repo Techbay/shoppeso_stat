@@ -1,0 +1,25 @@
+common: &common
+  VIGLINK_KEY: 3ffbe4f1bc41c453f182ec3c7b906171
+  VIGLINK_SECRET: 5b083295000a435ae620a6cfc595145586ca81f6
+  MIXPANEL_TOKEN: c8cce1afe095000b43c5f99cb574e8c3
+ 
+development:
+  <<: *common
+  DATABASE: 'shoppeso_stat'
+  DATABASE_HOST: 'localhost'
+  DATABASE_USERNAME: 'clark'
+  DATABASE_PASSWORD: ''
+test:
+  <<: *common
+  DATABASE: 'shoppeso_stat'
+  DATABASE_HOST: 'localhost'
+  DATABASE_USERNAME: ''
+  DATABASE_PASSWORD: ''
+production:
+  <<: *common
+  DATABASE: 'shoppeso_stat'
+  DATABASE_HOST: '127.0.0.1'
+  DATABASE_PORT: '5432'
+  DATABASE_USERNAME: 'gopeso'
+  DATABASE_PASSWORD: ''
+  SECRET_KEY_BASE: 01a4a2b4c267547f59cfbd0f6a308e2b04b7f1b999c2522e0d89cb39ccaf27bd5c52d6a33d65e11bcb4668f30dfb5fec340df4642316d514ab999d5649510ff4
