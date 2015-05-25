@@ -4,6 +4,7 @@ class HomeController < ApplicationController
   end
 
   def jump
+    History.create(item_id: params[:tid], user_id: params[:cuid], url: params[:u], action_name: "click")
     redirect_to generate_viglink(params)
   rescue
     redirect_to "http://www.shoppeso.com/"
