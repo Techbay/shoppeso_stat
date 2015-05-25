@@ -59,3 +59,9 @@ role :web, %w{techbay@stat.shoppeso.com}
 #     auth_methods: %w(publickey password)
 #     # password: 'please use keys'
 #   }
+
+set :ssh_options, {
+  forward_agent: true,
+  auth_methods: ["publickey"],
+  keys: ["~/keys/techbay.pem"]
+} 
