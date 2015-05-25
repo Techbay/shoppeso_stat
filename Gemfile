@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'figaro'
 gem 'activeadmin', '~> 1.0.0.pre1'
+gem 'nprogress-rails'
 
 group :development, :test do
   gem 'byebug'
