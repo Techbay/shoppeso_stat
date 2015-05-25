@@ -4,7 +4,7 @@ path = "/home/#{user}/apps/#{application}/shared"
  
 port 5000
 threads 0, 4
-workers 1
+workers 2
 worker_timeout 60
 environment 'production'
 daemonize true
