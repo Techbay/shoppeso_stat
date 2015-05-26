@@ -73,6 +73,7 @@ namespace :deploy do
           execute :bundle, "exec puma", "--config", fetch(:puma_config_path), "-e", fetch(:rails_env), "-d"
         end
       end
+      execute :bundle, "exec bin/delayed_job", "-n 1", "restart", "RAILS_ENV=production"
     end
   end
   after :publishing, :restart

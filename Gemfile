@@ -12,6 +12,7 @@ gem 'figaro'
 gem 'devise'
 gem 'activeadmin', '~> 1.0.0.pre1'
 gem 'nprogress-rails'
+gem 'delayed_job_active_record'
 
 group :development, :test do
   gem 'byebug'

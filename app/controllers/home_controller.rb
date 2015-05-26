@@ -4,7 +4,7 @@ class HomeController < ApplicationController
   end
 
   def jump
-    History.create(item_id: params[:tid], user_id: params[:cuid], url: params[:u], action_name: "click")
+    TrackJob.perform_later(params[:tid], params[:cuid], params[:u])
     redirect_to generate_viglink(params)
   rescue
     redirect_to "http://www.shoppeso.com/"
